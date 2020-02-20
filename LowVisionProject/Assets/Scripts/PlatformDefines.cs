@@ -12,7 +12,8 @@ public class PlatformDefines : MonoBehaviour {
 		Editor,
 		Vive,
 		OculusCV1,
-		Android
+        VivePro,
+		Android,
 		//OculusDK2,
 		//Gear // detect if android device? 
 		//Cardboard
@@ -37,6 +38,7 @@ public class PlatformDefines : MonoBehaviour {
 	public HMD_DATA myHMD = new HMD_DATA ();   
 	public static int hmd_id; 
 	const string model_vive1 = "Vive MV";
+    const string model_vive2 = "VIVE_Pro MV";
 	const string model_rift1 = "Oculus Rift CV1";
 	const string model_riftdk2 = "Oculus Rift DK2"; 
 	//const string model_gear = "Samsung Gear"; // check this (name contains "samsung" :?
@@ -44,6 +46,7 @@ public class PlatformDefines : MonoBehaviour {
 
 	// On Awake():  Detect device/build settings and save indicator
  	void Awake() {
+        print(UnityEngine.XR.XRDevice.model);
 		string model = UnityEngine.XR.XRDevice.model != null ?
 			UnityEngine.XR.XRDevice.model : "";  		// conditional operator isn't doing much here but ehhh		
 
@@ -52,6 +55,8 @@ public class PlatformDefines : MonoBehaviour {
 			hmd_id = (int)Type.Vive;
 		else if (model == model_rift1)
 			hmd_id = (int)Type.OculusCV1;
+        else if(model==model_vive2)
+            hmd_id = (int)Type.VivePro;
 		else
 			hmd_id = (int)Type.Editor; 
 		#endif 
@@ -91,7 +96,15 @@ public class PlatformDefines : MonoBehaviour {
 			myHMD.fov_y = 93; 
 			myHMD.set_pixel_density ();
 			break;
-		case (int)Type.Android:
+            case (int)Type.VivePro:
+                Debug.Log("Vive Pro connected");
+                myHMD.screen_dimension_x = 1440;
+                myHMD.screen_dimension_y = 1600;
+                myHMD.fov_x = 110;
+                myHMD.fov_y = 122;
+                myHMD.set_pixel_density();
+                break;
+            case (int)Type.Android:
 			Debug.Log ("Android device connected? Assumes Galaxy S7"); 
 			myHMD.screen_dimension_x = 1280;
 			myHMD.screen_dimension_y = 1440;
