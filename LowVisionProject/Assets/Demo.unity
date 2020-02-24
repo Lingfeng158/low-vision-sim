@@ -198,7 +198,7 @@ MonoBehaviour:
   y_scale: 0
   x_trans: NaN
   y_trans: NaN
-  maskTexture: {fileID: 2800000, guid: c0f82b03621b68848b4d75fe830d8a75, type: 3}
+  maskTexture: {fileID: 2800000, guid: 727c048fb4f18ef4999dce08c7fdb288, type: 3}
   maskColor: {r: 0, g: 0, b: 0, a: 1}
   downsample: 1
   blurSize: 6
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9003819}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15468e117c99b94dbc0c6f3b263c1b2, type: 3}
   m_Name: 
@@ -219,7 +219,7 @@ MonoBehaviour:
   maskSpread: 0
   maskRadius: 0
   maskColor: {r: 0, g: 0, b: 0, a: 1}
-  maskTexture: {fileID: 2800000, guid: c0f82b03621b68848b4d75fe830d8a75, type: 3}
+  maskTexture: {fileID: 2800000, guid: 727c048fb4f18ef4999dce08c7fdb288, type: 3}
   maskInvert: 0
   x_scale: 0
   y_scale: 0
@@ -3811,11 +3811,6 @@ Transform:
   m_Father: {fileID: 695463295}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &754718900 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224024241851167916, guid: 17e91bbd74e01774e93d2c1e2b3bc2f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 2015975034}
 --- !u!1 &795376475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,7 +3839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2119605986}
-  - {fileID: 754718900}
+  - {fileID: 2015975035}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6207,7 +6202,7 @@ MonoBehaviour:
   y_scale: 0
   x_trans: NaN
   y_trans: NaN
-  maskTexture: {fileID: 2800000, guid: 166815d36abb319429bdb19781316584, type: 3}
+  maskTexture: {fileID: 2800000, guid: 038dfa72fb311a240b430b4bfda94f7c, type: 3}
   maskColor: {r: 0, g: 0, b: 0, a: 1}
   downsample: 1
   blurSize: 6
@@ -6218,7 +6213,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1233819579}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15468e117c99b94dbc0c6f3b263c1b2, type: 3}
   m_Name: 
@@ -6228,7 +6223,7 @@ MonoBehaviour:
   maskSpread: 0
   maskRadius: 0
   maskColor: {r: 0, g: 0, b: 0, a: 1}
-  maskTexture: {fileID: 2800000, guid: 166815d36abb319429bdb19781316584, type: 3}
+  maskTexture: {fileID: 2800000, guid: 038dfa72fb311a240b430b4bfda94f7c, type: 3}
   maskInvert: 0
   x_scale: 0
   y_scale: 0
@@ -11718,6 +11713,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17e91bbd74e01774e93d2c1e2b3bc2f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2015975035 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2015975034}
 --- !u!1 &2019955532
 GameObject:
   m_ObjectHideFlags: 0
